@@ -1,0 +1,12 @@
+name = "Plain Docs"
+license = "MIT"
+licenselink = "https://github.com/LiaungYip/plain-docs/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/LiaungYip/plain-docs/"
+tags = []
+features = []
+min_version = 0.18
+
+[author]
+  name = "Li-aung Yip"
+  homepage = "https://www.penwatch.net/"
