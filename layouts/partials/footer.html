@@ -1,0 +1,32 @@
+<div class="pure-g" id="foot">
+  <div class="pure-u-1">
+
+      {{ if .Site.Params.footer.show_last_modified_time }}
+        <p>Last modified <time datetime="{{- .Lastmod.Format "2006-01-02T15:04:05Z07:00" -}}" class="post-list timeago">{{- .Lastmod.Format "2006-01-02" -}}</time></p>
+      {{ end }}
+
+
+    {{ if .Site.Copyright }}
+      <p>{{ .Site.Copyright | safeHTML }}</p>
+    {{ end }}
+
+
+    {{ if .Site.Params.footer.show_hugo }}
+       <p>Generated with ♥ by <a href="https://gohugo.io">Hugo</a> {{ .Hugo.Version }}</p>
+    {{ end }}
+
+
+    {{ if .Site.Params.footer.edit_url_base }}
+      {{ if .IsPage }}
+        <p>Comments? Corrections? <b>You</b> can edit this file on GitHub: <a href='{{ .Site.Params.footer.edit_url_base }}{{ replace .File.Path "\\" "/" }}'><code>{{ replace .File.Path "\\" "/" }}'/code></a></p>
+      {{ end }}
+    {{ end }}
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.4/timeago.min.js" integrity="sha256-34otvl+f6DWlliQUlAwT5hvizEJc8lPlNpW9T23pfGA=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  new timeago().render(document.querySelectorAll('.timeago'));
+</script>
+</body>
+</html>

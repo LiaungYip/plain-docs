@@ -12,7 +12,7 @@
   <div class="pure-u-4-5" id="main">
   	<main>
   	  <header>
-  	    <h1>{{ if .Draft }}DRAFT:{{ end }}{{ .Title }}</h1>
+  	    <h1>{{ if .Draft }}DRAFT:{{ end }}Listing for: {{ .Title }}</h1>
   	  </header>
 
   	  {{ if .Description }}
@@ -22,6 +22,13 @@
   	  {{ if .Content }}
         {{ .Content }}
       {{ end }}
+
+      {{- range $key, $value := .Data.Terms.ByCount -}}
+        <li>
+          <a href="{{- $value.Name | urlize -}}">{{- $value.Name -}}</a>
+          <span>&#40;{{- $value.Count -}}&#41;</span>
+        </li>
+      {{- end -}}
     </main>
   </div>
 </div>
