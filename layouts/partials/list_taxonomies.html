@@ -1,20 +1,23 @@
-{{ $b := .Site.BaseURL }}
+<!-- [TODO] The  { delimit (slice ... ) "" | relURL } hack is really bad. 
+Track https://discuss.gohugo.io/t/html-links-for-tags-and-categories/3567/2 for progress. -->
+
 {{ if isset .Params "tags" }}
   {{ range .Params.tags }}
-    <a class="pure-button" href="{{ $b }}tags/{{ . | urlize }}">Tag: {{ . }}</a>
+    <a class="pure-button" href="{{ delimit (slice "/tags/" (urlize .) $.Site.Params.ugly) "" | relURL }}">Tag: {{ . }}</a>
   {{ end }}
 {{ end }}
 
 {{ if isset .Params "categories" }}
   {{ range .Params.categories }}
-    <a class="pure-button" href="{{ $b }}categories/{{ . | urlize }}">Category: {{ . }}</a>
+    <a class="pure-button" href="{{ delimit (slice "/categories/" (urlize .) $.Site.Params.ugly) "" | relURL }}">Category: {{ . }}</a>
   {{ end }}
 {{ end }}
 
 {{ if isset .Params "series" }}
   {{ range .Params.series }}
-    <a class="pure-button" href="{{ $b }}series/{{ . | urlize }}">Series: {{ . }}</a>
+    <a class="pure-button" href="{{ delimit (slice "/series/" (urlize .) $.Site.Params.ugly) "" | relURL }}">Series: {{ . }}</a>
   {{ end }}
 {{ end }}
 
-<!-- [TODO] "Previous in category", "Next in category". Some prior art here: https://discuss.gohugo.io/t/previous-in-series-and-next-in-series-links/2654/6 -->
+<!-- [TODO] "Previous in category", "Next in category".
+Some prior art here: https://discuss.gohugo.io/t/previous-in-series-and-next-in-series-links/2654/6 -->

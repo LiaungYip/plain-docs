@@ -27,7 +27,7 @@
       {{ range $name, $page := .Site.Pages }}
         {{ if ne .Type "page" }}
           <article>
-          <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+          <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
           </article>
         {{ end }}
       {{ end }}
