@@ -1,6 +1,6 @@
 {{ $page := .page }}
 <ul>
-{{ range .menu }}
+{{ range .menu.ByName }}
   {{ $iz := $page.IsMenuCurrent "main" . }}
   {{ $haz := $page.HasMenuCurrent "main" . }}
   {{ if .HasChildren }} 
