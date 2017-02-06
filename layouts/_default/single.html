@@ -13,6 +13,7 @@
   	<main>
   	  <header>
   	    <h1>{{ if .Draft }}DRAFT:{{ end }}{{ .Title }}</h1>
+        {{ partial "list_taxonomies.html" . }}
   	  </header>
 
   	  {{ if .Description }}

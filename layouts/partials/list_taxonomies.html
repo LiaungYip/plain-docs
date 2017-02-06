@@ -1,0 +1,20 @@
+{{ $b := .Site.BaseURL }}
+{{ if isset .Params "tags" }}
+  {{ range .Params.tags }}
+    <a class="pure-button" href="{{ $b }}tags/{{ . | urlize }}">Tag: {{ . }}</a>
+  {{ end }}
+{{ end }}
+
+{{ if isset .Params "categories" }}
+  {{ range .Params.categories }}
+    <a class="pure-button" href="{{ $b }}categories/{{ . | urlize }}">Category: {{ . }}</a>
+  {{ end }}
+{{ end }}
+
+{{ if isset .Params "series" }}
+  {{ range .Params.series }}
+    <a class="pure-button" href="{{ $b }}series/{{ . | urlize }}">Series: {{ . }}</a>
+  {{ end }}
+{{ end }}
+
+<!-- [TODO] "Previous in category", "Next in category". Some prior art here: https://discuss.gohugo.io/t/previous-in-series-and-next-in-series-links/2654/6 -->
