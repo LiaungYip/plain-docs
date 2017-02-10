@@ -1,22 +1,22 @@
-body {
-	/*background: #fff4cc;*/
-}
 #header {
 	padding: 0 1em;
-	/*background: #fe8;*/
 	background: black;
 	color: white;
+}
+#header h1 {
+	font-size: 1em;
+}
+#header h1 a {
+	color: inherit;
+	text-decoration: inherit;
+}
+#header h1 a:hover {
+	text-decoration: underline;
 }
 #main {
 	background: white;
 }
 #main main {
-	padding: 0em 1em 1em 1em;
-}
-#navbar {
-	background: white;
-}
-#navbar nav {
 	padding: 0em 1em 1em 1em;
 }
 #foot {
@@ -44,26 +44,37 @@ blockquote {
 	padding: 0.1em 1em 0.1em 1em;
 	background-color: #eee;
 }
+#navbar {
+	background: white;
+}
+#navbar nav {
+	padding: 0em 1em 1em 0.5em;
+}
 .hot {
 	font-weight: bold;
+	color: red;
 }
-#header h1 a {
-	color: inherit;
-	text-decoration: inherit;
-}
-#header h1 a:hover{
-	text-decoration: underline;
-}
-nav ul{
-	list-style: disc;
+nav ul {
+	list-style: none;
 	padding-left: 0.5em;
+	background: #ffffff;
 }
-nav li a{
+nav ul ul {
+	background: #f8f8f8;
+}
+nav ul ul ul {
+	background: #f0f0f0;
+}
+nav ul ul ul ul {
+	background: #e8e8e8;
+	font-size: small;
+}
+nav li {
+	border-top: 1px solid silver;
+}
+nav li a {
 	text-decoration: none;
 }
-nav li a:hover{
+nav li a:hover {
 	text-decoration: underline;
-}
-#header h1{
-	font-size: 	1em;
 }
