@@ -1,7 +1,6 @@
   <div class="pure-u-1 pure-u-md-1-5" id="menu">
-    <button class="small-screen-hide" id="menu-button-top">Show Menu</button>
-    <nav class="small-screen-hide" id="menu-inner">
+    <nav class="hide-when-small" id="menu-inner">
       {{ partial "menu_recursive.html" (dict "menu" .Site.Menus.main "page" . "site" .Site) }}
     </nav>
-    <button id="menu-button-bottom">Show Menu</button>
+    <button id="menu-button">Show Menu</button>
   </div>

@@ -87,7 +87,7 @@ nav li a:hover {
 	text-decoration: underline;
 }
 /* Stuff to deal with responsive menu */
-#menu-button-top, #menu-button-bottom {
+#menu-button {
 	display: none; /* only visible on small screen */
 	background: silver;
 	padding: 0.25em;
@@ -97,19 +97,19 @@ nav li a:hover {
 	transition-duration: 0.2s;
 	font-weight: bold;
 }
-#menu-button-top:hover, #menu-button-bottom:hover {
+#menu-button:hover {
 	background: black;
 	color: white;
 }
 /* Styles applied when width < 768 px */
 @media (max-width:48em) {
-	#menu-button-top, #menu-button-bottom {
+	#menu-button{
 		display: block;
 	}
-	#menu-button-top.small-screen-hide, #menu-button-bottom.small-screen-hide {
+	#menu-button.hide-when-small {
 		display: none;
 	}
-	#menu-inner.small-screen-hide {
+	#menu-inner.hide-when-small {
 		display: none;
 	}
 }

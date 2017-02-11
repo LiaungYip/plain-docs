@@ -28,27 +28,18 @@
 <script type="text/javascript">
   new timeago().render(document.querySelectorAll('.timeago'));
 </script>
+<!-- Show/hide menu -->
 <script type="text/javascript">
-// Script to hide/show menu
-var b1 = document.querySelector('#menu-button-top');
-var b2 = document.querySelector('#menu-button-bottom');
-var menu = document.querySelector('#menu-inner');
-var toggle_function = function (event) {
-      if (menu.className == "small-screen-hide") {
-          menu.className = "";
-          b1.className = "";
-          b1.innerHTML = "Hide Menu";
-          b2.innerHTML = "Hide Menu";
-
-      } else {
-          menu.className = "small-screen-hide";
-          b1.className = "small-screen-hide";
-          b1.innerHTML = "Show Menu";
-          b2.innerHTML = "Show Menu";
-      }
-    }
-b1.addEventListener('click', toggle_function );
-b2.addEventListener('click', toggle_function );
-</script>
+var b = document.querySelector("#menu-button");
+var m = document.querySelector("#menu-inner");
+b.addEventListener("click", function(event) {
+  if (m.className == "hide-when-small") {
+    m.className = "";
+    b.innerHTML = "Hide Menu";
+  } else {
+    m.className = "hide-when-small";
+    b.innerHTML = "Show Menu";
+  }
+});</script>
 </body>
 </html>
