@@ -21,9 +21,11 @@
     
     <!--<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/plain-docs.css">-->
     <link rel="stylesheet" href="{{ "css/plain-docs.css" | relURL }}">
+    <style>#header{background:{{ .Site.Params.header.bg_color }}; color:{{ .Site.Params.header.fg_color }};}</style>
 </head>
 
 <body>
+{{ partialCached "config_check.html" . }}
 <div class="pure-g">
   <div class="pure-u-1" id="header">
     <!-- hack below is terrible. -->
