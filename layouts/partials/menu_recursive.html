@@ -1,13 +1,17 @@
 {{ $page := .page }}
+{{ $site := .site }}
 <ul>
 {{ range .menu.ByName }}
   {{ $iz := $page.IsMenuCurrent "main" . }}
   {{ $haz := $page.HasMenuCurrent "main" . }}
   {{ if .HasChildren }} 
     <li>
-      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}}"> {{ .Pre }} {{ .Name }}</a>
+      <a href="{{ .URL | relURL }}" class="{{ if or $iz $haz }}hot{{end}}">
+        {{ .Pre }} {{ .Name }}
+        {{ if not (or $iz $haz) }}{{ $site.Params.menu.more_icon }}{{ end }}
+      </a>
       {{ if or $iz $haz }}
-        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page) }}
+        {{ partial "menu_recursive.html" (dict "menu" .Children "page" $page "site" $site) }}
       {{ end }}
     </li>
   {{ else }}
