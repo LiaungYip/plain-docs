@@ -18,7 +18,7 @@
 
     {{ if .Site.Params.footer.edit_url_base }}
       {{ if .IsPage }}
-        <p>Comments? Corrections? <b>You</b> can edit this file on GitHub: <a href='{{ .Site.Params.footer.edit_url_base }}{{ replace .File.Path "\\" "/" }}'><code>{{ replace .File.Path "\\" "/" }}'</code></a></p>
+        <p>Comments? Corrections? <b>You</b> can edit this file on GitHub: <a href='{{ .Site.Params.footer.edit_url_base }}{{ replace .File.Path "\\" "/" }}'><code>{{ replace .File.Path "\\" "/" }}</code></a></p>
       {{ end }}
     {{ end }}
 
