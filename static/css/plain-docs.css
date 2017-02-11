@@ -1,7 +1,10 @@
 #header {
-	padding: 0 1em;
+	padding: 1em;
 	background: black;
 	color: white;
+}
+#header * {
+	margin: 0;
 }
 #header h1 {
 	font-size: 1em;
@@ -12,6 +15,11 @@
 }
 #header h1 a:hover {
 	text-decoration: underline;
+}
+#tagline {
+	font-size: small;
+	font-style: italic;
+	font-weight: bold;
 }
 #main {
 	background: white;

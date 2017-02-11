@@ -28,5 +28,6 @@
   <div class="pure-u-1" id="header">
     <!-- hack below is terrible. -->
     <h1><a href="{{ .Site.Params.uglyhome | relURL }}">{{ .Site.Title }}</a></h1>
+    {{ if isset .Site.Params.header "tagline" }}<p id="tagline">{{ .Site.Params.header.tagline }}</p>{{ end }}
   </div>
 </div>
