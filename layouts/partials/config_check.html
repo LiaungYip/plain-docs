@@ -1,0 +1,24 @@
+{{ if not ( isset .Site.Params "ugly") }}
+  <p>Error in config.toml: .Site.Params.ugly is not set!</p>
+  <p>See <a href="https://github.com/LiaungYip/plain-docs/blob/master/example_config.toml">example_config.toml</a>.</p>
+{{ end }}
+
+{{ if not ( isset .Site.Params "uglyhome") }}
+  <p>Error in config.toml: .Site.Params.uglyhome is not set!</p>
+  <p>See <a href="https://github.com/LiaungYip/plain-docs/blob/master/example_config.toml">example_config.toml</a>.</p>
+{{ end }}
+
+{{ if not ( isset .Site.Params.menu "more_icon") }}
+  <p>Error in config.toml: .Site.Params.menu.more_icon is not set!</p>
+  <p>See <a href="https://github.com/LiaungYip/plain-docs/blob/master/example_config.toml">example_config.toml</a>.</p>
+{{ end }}
+
+{{ if not ( isset .Site.Params.header "fg_color") }}
+  <p>Error in config.toml: .Site.Params.header.fg_color is not set!</p>
+  <p>See <a href="https://github.com/LiaungYip/plain-docs/blob/master/example_config.toml">example_config.toml</a>.</p>
+{{ end }}
+
+{{ if not ( isset .Site.Params.header "bg_color") }}
+  <p>Error in config.toml: .Site.Params.header.bg_color is not set!</p>
+  <p>See <a href="https://github.com/LiaungYip/plain-docs/blob/master/example_config.toml">example_config.toml</a>.</p>
+{{ end }}

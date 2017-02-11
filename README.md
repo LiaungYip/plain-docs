@@ -1,5 +1,11 @@
 Mission: **To be a simple theme for complex documentation sites.**
 
+# Getting Started
+
+This theme requires you to set a few options in `config.toml`, or it won't work.
+
+See `example_config.toml`.
+
 # Goals
 
  - Keep the appearance as simple as possible.
