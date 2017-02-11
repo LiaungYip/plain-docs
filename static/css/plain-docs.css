@@ -28,7 +28,6 @@
 	padding: 0em 1em 1em 1em;
 }
 #foot {
-	margin-top: 5em;
 	border-top: 10px solid #eee;
 	text-align: right;
 	padding: 0.5em 0.8em;
@@ -53,7 +52,7 @@ blockquote {
 	background-color: #eee;
 }
 #menu {
-	background: white;
+	/*background: #eee;*/
 }
 #menu nav {
 	padding: 0em 1em 0em 0.5em;
@@ -63,22 +62,11 @@ blockquote {
 	color: red;
 }
 nav ul {
-	list-style: none;
+	margin-left: 0.5em;
 	padding-left: 0.5em;
-	background: #ffffff;
-}
-nav ul ul {
-	background: #f8f8f8;
 }
 nav ul ul ul {
-	background: #f0f0f0;
-}
-nav ul ul ul ul {
-	background: #e8e8e8;
 	font-size: small;
-}
-nav li {
-	border-top: 1px solid silver;
 }
 nav li a {
 	text-decoration: none;
@@ -86,6 +74,7 @@ nav li a {
 nav li a:hover {
 	text-decoration: underline;
 }
+
 /* Stuff to deal with responsive menu */
 #menu-button {
 	display: none; /* only visible on small screen */
@@ -101,9 +90,10 @@ nav li a:hover {
 	background: black;
 	color: white;
 }
+
 /* Styles applied when width < 768 px */
 @media (max-width:48em) {
-	#menu-button{
+	#menu-button {
 		display: block;
 	}
 	#menu-button.hide-when-small {
