@@ -22,6 +22,7 @@
         {{ if ne .Type "page" }}
           <article>
           <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+          {{ if $page.Draft }} (DRAFT) {{ end }}
           </article>
         {{ end }}
       {{ end }}
